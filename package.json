@@ -7,6 +7,9 @@
     "test": "node index.js",
     "start":"node index.js"
   },
+   "bugs": {
+    "url": "https://github.com/akashmalpani/csvToJson/issues"
+  },
   "dependencies": {
     "angular": "^1.6.1",
     "angular-route": "^1.6.1",
@@ -15,8 +18,8 @@
     "body-parser": "^1.15.2",
     "caseless": "^0.11.0",
     "combined-stream": "^1.0.5",
-    "ejs": "*",
-    "express": "*",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
     "extend": "^3.0.0",
     "forever-agent": "^0.6.1",
     "form-data": "^2.1.2",
@@ -36,7 +39,9 @@
     "tunnel-agent": "^0.4.3",
     "uuid": "^3.0.1"
   },
-  "engine": "node >= 4.6.0",
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "author": "akash malpani",
   "license": "ISC"
 }
