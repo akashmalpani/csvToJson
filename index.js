@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-// var favicon = require('serve-favicon');
+var favicon = require('serve-favicon');
 
 var app = express();
 var request = require('request');
@@ -11,7 +11,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());   
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set('port', process.env.PORT);
+app.set('port', process.env.PORT || 3000);
 // app.use(express.favicon(path.join('/', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -19,7 +19,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
 app.use('/templates', express.static(__dirname + '/views/'));
-
+app.use(favicon(path.join(__dirname,'favicon.ico')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -118,10 +118,10 @@ function createJosn(columns, keys){
    }
 }
 
-app.get('/favicon.ico', function(req, res) {
-    res.sendStatus(204);
-});
+// app.get('/favicon.ico', function(req, res) {
+//     res.sendStatus(204);
+// });
 
-app.listen(process.env.PORT, function () {
-	console.log("server listening on port 3000");
+app.listen(process.env.PORT || 3000, function () {
+	console.log("server listening on port ");
 });
