@@ -11,7 +11,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());   
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT);
 // app.use(express.favicon(path.join('/', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -122,6 +122,6 @@ app.get('/favicon.ico', function(req, res) {
     res.sendStatus(204);
 });
 
-app.listen(process.env.PORT || 3000, function () {
+app.listen(process.env.PORT, function () {
 	console.log("server listening on port 3000");
 });
