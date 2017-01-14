@@ -24,7 +24,7 @@ function convertCsvToJosn () {
 		        	csvConvertDOMObj.requestLoader.style.display = "inline-flex";
 		        }
 		    }
-		    xmlHttp.open("GET", 'http://localhost:3000/convert/?url='+url, true); // true for asynchronous 
+		    xmlHttp.open("GET", '/convert/?url='+url, true); // true for asynchronous 
 		    xmlHttp.send(null);
 		}else{
 			csvConvertDOMObj.errorMessage.innerText = "Invalid file format.";	
