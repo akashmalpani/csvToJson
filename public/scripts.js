@@ -12,7 +12,6 @@ function convertCsvToJosn () {
 		        if (xmlHttp.readyState == 4 && (xmlHttp.status == 200 || xmlHttp.status == 0 || xmlHttp.status == 304)){
 		        	csvConvertDOMObj.requestLoader.style.display = "none";
 		            if(xmlHttp.responseText.indexOf("[") > -1){
-		            	alert("length "+JSON.parse(xmlHttp.responseText).length);
 		            	csvConvertDOMObj.jsonData.value = JSON.stringify(JSON.parse(xmlHttp.responseText), null, 2);
 		            }else{
 		            	csvConvertDOMObj.errorMessage.innerText = xmlHttp.responseText;
