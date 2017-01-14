@@ -40,7 +40,12 @@
     "uuid": "^3.0.1"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4.6.0",
+    "npm" : "~2.15.9"
+  },
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/akashmalpani/csvToJson.git"
   },
   "author": "akash malpani",
   "license": "ISC"
