@@ -36,6 +36,7 @@
     "tunnel-agent": "^0.4.3",
     "uuid": "^3.0.1"
   },
+  "engine": "node >= 4.6.0",
   "author": "akash malpani",
   "license": "ISC"
 }
