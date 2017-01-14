@@ -1,0 +1,54 @@
+body {
+	font-size: 12px;
+    font-family: serif, helvitica;
+}
+
+.homeController{
+	padding-top: 1%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.home-url-box{
+	box-shadow: 0px 0px 2px #747474;
+    width: 100%;
+}
+
+.home-url-box div:first-child{
+    padding: 1%;
+    width: 100%;
+}
+
+.home-url-box div input[type="url"]{
+    width: 80%;
+}
+
+#errorMessage{
+	color: #d60a1b;
+	font-weight: 700;
+    text-align: center;
+    padding-bottom: 8px;
+
+}
+
+.url-input-box{
+	margin-left: 5%;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    animation: spin 1s linear infinite;
+    display: none; 
+    position: absolute;
+    margin-left: 9px;
+    margin-top: 2px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

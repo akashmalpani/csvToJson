@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+  <link rel="stylesheet" type="text/css" href="/style.css"> 
+  <script src="/scripts.js"></script>
+</head>
+<body>
+   <div  class="homeController">
+      <div class="home-url-box">
+          <div class="url-input-box">
+             
+     		     <div>
+                <label>URL: </label>
+                <input type="url"  id="csvFileUrlInput" required/>
+                 <button onclick="convertCsvToJosn()">Convert</button>
+                 <span id="requestLoader" class="loader"></span>
+              </div>  
+          </div>
+          <div>
+              <p id="errorMessage"></p> 
+          </div>   
+      </div>  
+      <div >
+        <label>
+           JOSN Output:
+        </label>
+        <br/>
+        <textarea id="jsonData" style="clear:both;width:100%;height: 451px;">
+          
+        </textarea>
+      </div>
+   </div>
+   <script type="text/javascript">
+      loadCsvConvertDomObj();
+   </script>
+</body>
+</html>
